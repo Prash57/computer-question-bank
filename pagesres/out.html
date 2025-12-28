@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>QBasic Conditional & Loop Programs</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f5f5f5;
+    padding:20px;
+    line-height:1.6;
+}
+h1,h2,h3{
+    color:#003366;
+}
+.section{
+    margin-bottom:45px;
+}
+.program{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:15px;
+    margin-bottom:25px;
+}
+pre{
+    background:#111;
+    color:#00ff99;
+    padding:15px;
+    border-radius:6px;
+    overflow-x:auto;
+}
+.output{
+    background:#ffffff;
+    padding:15px;
+    border-radius:6px;
+    border-left:5px solid #003366;
+}
+.output h4{
+    margin-top:0;
+    color:#003366;
+}
+.output pre{
+    background:#f0f0f0;
+    color:#000;
+}
+</style>
+</head>
+
+<body>
+
+<h1>QBasic Programs – Conditional Statements & Loops</h1>
+
+<h5><a href="https://prashantadhikari1.com.np/que.html"><<< Questions</a></h5>
+
+<!-- ================= SIMPLE IF ================= -->
+<div class="section">
+<h2>1. IF Statement (Simple IF)</h2>
+
+<h3>1. Positive Number</h3>
+<div class="program">
+<pre><code>
+CLS
+INPUT "Enter a number"; A
+IF A > 0 THEN PRINT "Positive Number"
+END
+</code></pre>
+<div class="output"><h4>Output</h4><pre><code>
+Enter a number? 5
+Positive Number
+</code></pre></div>
+</div>
+
+<h3>2. Voting Eligibility</h3>
+<div class="program">
+<pre><code>
+CLS
+INPUT "Enter age"; A
+IF A >= 18 THEN PRINT "Eligible to Vote"
+END
+</code></pre>
+<div class="output"><h4>Output</h4><pre><code>
+Enter age? 20
+Eligible to Vote
+</code></pre></div>
+</div>
+
+<h3>3. Even Number</h3>
+<div class="program">
+<pre><code>
+CLS
+INPUT "Enter a number"; A
+IF A MOD 2 = 0 THEN PRINT "Even Number"
+END
+</code></pre>
+<div class="output"><h4>Output</h4><pre><code>
+Enter a number? 8
+Even Number
+</code></pre></div>
+</div>
+
+<h3>4. Pass</h3>
+<div class="program">
+<pre><code>
+CLS
+INPUT "Enter marks"; M
+IF M >= 40 THEN PRINT "Pass"
+END
+</code></pre>
+<div class="output"><h4>Output</h4><pre><code>
+Enter marks? 55
+Pass
+</code></pre></div>
+</div>
+
+<h3>5. Uppercase Letter</h3>
+<div class="program">
+<pre><code>
+CLS
+INPUT "Enter a character"; C$
+IF C$ >= "A" AND C$ <= "Z" THEN PRINT "Uppercase Letter"
+END
+</code></pre>
+<div class="output"><h4>Output</h4><pre><code>
+Enter a character? A
+Uppercase Letter
+</code></pre></div>
+</div>
+</div>
+
+<!-- ================= IF ELSE ================= -->
+<div class="section">
+<h2>2. IF–ELSE Statement</h2>
+
+<h3>1. Even or Odd</h3>
+<div class="program">
+<pre><code>
+CLS
+INPUT "Enter a number"; A
+IF A MOD 2 = 0 THEN
+PRINT "Even"
+ELSE
+PRINT "Odd"
+END IF
+END
+</code></pre>
+<div class="output"><h4>Output</h4><pre><code>
+Enter a number? 7
+Odd
+</code></pre></div>
+</div>
+
+<h3>2. Greatest of Two</h3>
+<div class="program">
+<pre><code>
+CLS
+INPUT "Enter two numbers"; A, B
+IF A > B THEN
+PRINT A
+ELSE
+PRINT B
+END IF
+END
+</code></pre>
+<div class="output"><h4>Output</h4><pre><code>
+Enter two numbers? 9 4
+9
+</code></pre></div>
+</div>
+
+<h3>3. Taxable Salary</h3>
+<div class="program">
+<pre><code>
+CLS
+INPUT "Enter salary"; S
+IF S > 50000 THEN
+PRINT "Taxable"
+ELSE
+PRINT "Not Taxable"
+END IF
+END
+</code></pre>
+<div class="output"><h4>Output</h4><pre><code>
+Enter salary? 30000
+Not Taxable
+</code></pre></div>
+</div>
+
+<h3>4. Hot or Cold</h3>
+<div class="program">
+<pre><code>
+CLS
+INPUT "Enter temperature"; T
+IF T > 30 THEN
+PRINT "Hot Day"
+ELSE
+PRINT "Cold Day"
+END IF
+END
+</code></pre>
+<div class="output"><h4>Output</h4><pre><code>
+Enter temperature? 35
+Hot Day
+</code></pre></div>
+</div>
+
+<h3>5. Positive or Negative</h3>
+<div class="program">
+<pre><code>
+CLS
+INPUT "Enter number"; N
+IF N >= 0 THEN
+PRINT "Positive"
+ELSE
+PRINT "Negative"
+END IF
+END
+</code></pre>
+<div class="output"><h4>Output</h4><pre><code>
+Enter number? -5
+Negative
+</code></pre></div>
+</div>
+</div>
+
+<!-- ================= IF ELSE IF ================= -->
+<div class="section">
+<h2>3. IF–ELSEIF Ladder</h2>
+
+<h3>1. Division</h3>
+<div class="program">
+<pre><code>
+CLS
+INPUT "Enter marks"; M
+IF M >= 80 THEN 
+PRINT "Distinction"
+ELSEIF M >= 60 THEN 
+PRINT "First Division"
+ELSEIF M >= 45 THEN 
+PRINT "Second Division"
+ELSEIF M >= 32 THEN 
+PRINT "Third Division"
+ELSE 
+PRINT "Fail"
+END IF
+END
+</code></pre>
+<div class="output"><h4>Output</h4><pre><code>
+Enter marks? 70
+First Division
+</code></pre></div>
+</div>
+
+<h3>2. Positive, Negative, Zero</h3>
+<div class="program">
+<pre><code>
+CLS
+INPUT "Enter number"; N
+IF N > 0 THEN 
+PRINT "Positive"
+ELSEIF N < 0 THEN 
+PRINT "Negative"
+ELSE 
+PRINT "Zero"
+END IF
+END
+</code></pre>
+<div class="output"><h4>Output</h4><pre><code>
+Enter number? 0
+Zero
+</code></pre></div>
+</div>
+
+<h3>3. Age Group</h3>
+<div class="program">
+<pre><code>
+CLS
+INPUT "Enter age"; A
+IF A < 13 THEN 
+PRINT "Child"
+ELSEIF A < 20 THEN 
+PRINT "Teenager"
+ELSEIF A < 60 THEN 
+PRINT "Adult"
+ELSE 
+PRINT "Senior Citizen"
+END IF
+END
+</code></pre>
+<div class="output"><h4>Output</h4><pre><code>
+Enter age? 25
+Adult
+</code></pre></div>
+</div>
+
+<h3>4. Vowel or Consonant</h3>
+<div class="program">
+<pre><code>
+CLS
+INPUT "Enter character"; C$
+IF C$="A" OR C$="E" OR C$="I" OR C$="O" OR C$="U" THEN
+PRINT "Vowel"
+ELSEIF C$>="A" AND C$<="Z" THEN
+PRINT "Consonant"
+ELSE
+PRINT "Invalid"
+END IF
+END
+</code></pre>
+<div class="output"><h4>Output</h4><pre><code>
+Enter character? B
+Consonant
+</code></pre></div>
+</div>
+
+<h3>5. Electricity Bill</h3>
+<div class="program">
+<pre><code>
+CLS
+INPUT "Enter units"; U
+IF U<=20 THEN B=U*3
+ELSEIF U<=50 THEN 
+B=20*3+(U-20)*5
+ELSE 
+B=20*3+30*5+(U-50)*7
+END IF
+PRINT "Bill = "; B
+END
+</code></pre>
+<div class="output"><h4>Output</h4><pre><code>
+Enter units? 60
+Bill = 280
+</code></pre></div>
+</div>
+</div>
+
+<!-- ================= FOR…NEXT LOOP ================= -->
+<div class="section">
+<h2>4. FOR…NEXT Loop</h2>
+
+<!-- 1. 1 to 10 -->
+<h3>1. 1 to 10</h3>
+<div class="program">
+<pre><code>
+CLS
+FOR I = 1 TO 10
+PRINT I
+NEXT I
+END
+</code></pre>
+<div class="output">
+<h4>Output</h4>
+<pre><code>
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</code></pre>
+</div>
+</div>
+
+<!-- 2. Multiplication Table -->
+<h3>2. Multiplication Table</h3>
+<div class="program">
+<pre><code>
+CLS
+INPUT "Enter number"; N
+FOR I = 1 TO 10
+PRINT N; " x "; I; " = "; N * I
+NEXT I
+END
+</code></pre>
+<div class="output">
+<h4>Output</h4>
+<pre><code>
+Enter number? 5
+5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+5 x 4 = 20
+5 x 5 = 25
+5 x 6 = 30
+5 x 7 = 35
+5 x 8 = 40
+5 x 9 = 45
+5 x 10 = 50
+</code></pre>
+</div>
+</div>
+
+<!-- 3. Sum of 100 -->
+<h3>3. Sum of 100</h3>
+<div class="program">
+<pre><code>
+CLS
+S = 0
+FOR I = 1 TO 100
+S = S + I
+NEXT I
+PRINT S
+END
+</code></pre>
+<div class="output">
+<h4>Output</h4>
+<pre><code>
+5050
+</code></pre>
+</div>
+</div>
+
+<!-- 4. Even Numbers -->
+<h3>4. Even Numbers (2 to 50)</h3>
+<div class="program">
+<pre><code>
+CLS
+FOR I = 2 TO 50 STEP 2
+PRINT I
+NEXT I
+END
+</code></pre>
+<div class="output">
+<h4>Output</h4>
+<pre><code>
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+22
+24
+26
+28
+30
+32
+34
+36
+38
+40
+42
+44
+46
+48
+50
+</code></pre>
+</div>
+</div>
+
+<!-- 5. Factorial -->
+<h3>5. Factorial</h3>
+<div class="program">
+<pre><code>
+CLS
+INPUT "Enter number"; N
+F = 1
+FOR I = 1 TO N
+F = F * I
+NEXT I
+PRINT F
+END
+</code></pre>
+<div class="output">
+<h4>Output</h4>
+<pre><code>
+Enter number? 5
+120
+</code></pre>
+</div>
+</div>
+
+</div>
+<!-- ================= END FOR…NEXT LOOP ================= -->
+<!-- ================= DO WHILE LOOP ================= -->
+<div class="section">
+<h2>5. DO WHILE Loop</h2>
+
+<!-- 1. 1 to 10 -->
+<h3>1. 1 to 10</h3>
+<div class="program">
+<pre><code>
+CLS
+I = 1
+DO WHILE I <= 10
+PRINT I
+I = I + 1
+LOOP
+END
+</code></pre>
+<div class="output">
+<h4>Output</h4>
+<pre><code>
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</code></pre>
+</div>
+</div>
+
+<!-- 2. Odd numbers -->
+<h3>2. Odd Numbers (1 to 50)</h3>
+<div class="program">
+<pre><code>
+CLS
+I = 1
+DO WHILE I <= 50
+PRINT I
+I = I + 2
+LOOP
+END
+</code></pre>
+<div class="output">
+<h4>Output</h4>
+<pre><code>
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+27
+29
+31
+33
+35
+37
+39
+41
+43
+45
+47
+49
+</code></pre>
+</div>
+</div>
+
+<!-- 3. Sum of digits -->
+<h3>3. Sum of Digits</h3>
+<div class="program">
+<pre><code>
+CLS
+INPUT "Enter number"; N
+S = 0
+DO WHILE N > 0
+S = S + N MOD 10
+N = N \ 10
+LOOP
+PRINT S
+END
+</code></pre>
+<div class="output">
+<h4>Output</h4>
+<pre><code>
+Enter number? 1234
+Sum = 10
+</code></pre>
+</div>
+</div>
+
+<!-- 4. Reverse number -->
+<h3>4. Reverse Number</h3>
+<div class="program">
+<pre><code>
+CLS
+INPUT "Enter number"; N
+R = 0
+DO WHILE N > 0
+R = R * 10 + N MOD 10
+N = N \ 10
+LOOP
+PRINT R
+END
+</code></pre>
+<div class="output">
+<h4>Output</h4>
+<pre><code>
+Enter number? 456
+654
+</code></pre>
+</div>
+</div>
+
+<!-- 5. Until 0 -->
+<h3>5. Until 0</h3>
+<div class="program">
+<pre><code>
+CLS
+DO
+INPUT "Enter number"; N
+PRINT N
+LOOP WHILE N <> 0
+END
+</code></pre>
+<div class="output">
+<h4>Output</h4>
+<pre><code>
+Enter number? 5
+5
+Enter number? 3
+3
+Enter number? 0
+0
+</code></pre>
+</div>
+</div>
+
+</div>
+<!-- ================= END DO WHILE LOOPs ================= -->
+<!-- ================= WHILE…WEND LOOP ================= -->
+<div class="section">
+<h2>6. WHILE…WEND Loop</h2>
+
+<!-- 1. 10 to 1 -->
+<h3>1. 10 to 1</h3>
+<div class="program">
+<pre><code>
+CLS
+I = 10
+WHILE I >= 1
+PRINT I
+I = I - 1
+WEND
+END
+</code></pre>
+<div class="output">
+<h4>Output</h4>
+<pre><code>
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+</code></pre>
+</div>
+</div>
+
+<!-- 2. Sum up to N -->
+<h3>2. Sum up to N</h3>
+<div class="program">
+<pre><code>
+CLS
+INPUT "Enter N"; N
+I = 1
+S = 0
+WHILE I <= N
+S = S + I
+I = I + 1
+WEND
+PRINT S
+END
+</code></pre>
+<div class="output">
+<h4>Output</h4>
+<pre><code>
+Enter N? 10
+55
+</code></pre>
+</div>
+</div>
+
+<!-- 3. Count Digits -->
+<h3>3. Count Digits</h3>
+<div class="program">
+<pre><code>
+CLS
+INPUT "Enter number"; N
+C = 0
+WHILE N > 0
+C = C + 1
+N = N \ 10
+WEND
+PRINT C
+END
+</code></pre>
+<div class="output">
+<h4>Output</h4>
+<pre><code>
+Enter number? 12345
+5
+</code></pre>
+</div>
+</div>
+
+<!-- 4. Palindrome -->
+<h3>4. Palindrome</h3>
+<div class="program">
+<pre><code>
+CLS
+INPUT "Enter number"; N
+T = N
+R = 0
+WHILE N > 0
+R = R * 10 + N MOD 10
+N = N \ 10
+WEND
+IF R = T THEN
+PRINT "Palindrome"
+ELSE
+PRINT "Not Palindrome"
+END IF
+END
+</code></pre>
+<div class="output">
+<h4>Output</h4>
+<pre><code>
+Enter number? 121
+Palindrome
+</code></pre>
+</div>
+</div>
+
+<!-- 5. Sum of Even Numbers -->
+<h3>5. Sum of Even Numbers</h3>
+<div class="program">
+<pre><code>
+CLS
+I = 2
+S = 0
+WHILE I <= 100
+S = S + I
+I = I + 2
+WEND
+PRINT S
+END
+</code></pre>
+<div class="output">
+<h4>Output</h4>
+<pre><code>
+2550
+</code></pre>
+</div>
+</div>
+
+</div>
+<!-- ================= END WHILE…WEND LOOP ================= -->
+<!-- ================= NESTED FOR…NEXT LOOP ================= -->
+<div class="section">
+<h2>7. Nested FOR…NEXT Loop</h2>
+
+<!-- 1. Star Pattern -->
+<h3>1. Star Pattern</h3>
+<div class="program">
+<pre><code>
+CLS
+FOR I = 1 TO 4
+FOR J = 1 TO I
+PRINT "* ";
+NEXT J
+PRINT
+NEXT I
+END
+</code></pre>
+<div class="output">
+<h4>Output</h4>
+<pre><code>
+*
+* *
+* * *
+* * * *
+</code></pre>
+</div>
+</div>
+
+<!-- 2. Matrix -->
+<h3>2. Matrix (3 × 3)</h3>
+<div class="program">
+<pre><code>
+CLS
+K = 1
+FOR I = 1 TO 3
+FOR J = 1 TO 3
+PRINT K; " ";
+K = K + 1
+NEXT J
+PRINT
+NEXT I
+END
+</code></pre>
+<div class="output">
+<h4>Output</h4>
+<pre><code>
+1 2 3
+4 5 6
+7 8 9
+</code></pre>
+</div>
+</div>
+
+<!-- 3. Tables from 1 to 2 -->
+<h3>3. Tables from 1 to 2</h3>
+<div class="program">
+<pre><code>
+CLS
+FOR I = 1 TO 2        ' Loop for tables 1 to 2
+    FOR J = 1 TO 10   ' Loop for multiplication 1 to 10
+        PRINT I; " x "; J; " = "; I * J
+    NEXT J
+    PRINT              ' Blank line after each table
+NEXT I
+END
+</code></pre>
+<div class="output">
+<h4>Output</h4>
+<pre><code>
+1 x 1 = 1
+1 x 2 = 2
+1 x 3 = 3
+1 x 4 = 4
+1 x 5 = 5
+1 x 6 = 6
+1 x 7 = 7
+1 x 8 = 8
+1 x 9 = 9
+1 x 10 = 10
+
+2 x 1 = 2
+2 x 2 = 4
+2 x 3 = 6
+2 x 4 = 8
+2 x 5 = 10
+2 x 6 = 12
+2 x 7 = 14
+2 x 8 = 16
+2 x 9 = 18
+2 x 10 = 20
+</code></pre>
+</div>
+</div>
+
+
+<!-- 4. Number Pyramid -->
+<h3>4. Number Pyramid</h3>
+<div class="program">
+<pre><code>
+CLS
+FOR I = 1 TO 4
+FOR J = 1 TO I
+PRINT J; " ";
+NEXT J
+PRINT
+NEXT I
+END
+</code></pre>
+<div class="output">
+<h4>Output</h4>
+<pre><code>
+1
+1 2
+1 2 3
+1 2 3 4
+</code></pre>
+</div>
+</div>
+
+<!-- 5. Student Total -->
+<h3>5. Student Total</h3>
+<div class="program">
+<pre><code>
+CLS
+FOR I = 1 TO 5
+T = 0
+FOR J = 1 TO 3
+INPUT M
+T = T + M
+NEXT J
+PRINT "Total = "; T
+NEXT I
+END
+</code></pre>
+<div class="output">
+<h4>Output</h4>
+<pre><code>
+Enter marks? 50
+Enter marks? 60
+Enter marks? 70
+Total = 180
+</code></pre>
+</div>
+</div>
+
+</div>
+<!-- ================= END NESTED FOR…NEXT LOOP ================= -->
+
+
+</body>
+</html>
